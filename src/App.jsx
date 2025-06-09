@@ -1,10 +1,10 @@
-import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Home/Hero';
-import About from './components/About/About';
-import Project from './components/Projects/Project';
-import Contact from './components/Contacts/Contact';
-import Footer from './components/Footer/Footer';
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Home/Hero";
+import About from "./components/About/About";
+import Project from "./components/Projects/Project";
+import Contact from "./components/Contacts/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -12,8 +12,10 @@ function App() {
       <Navbar />
       <Hero />
       <Project />
-      <About />
-      <Contact />
+      <section className="about-us">
+        <About />
+        <Contact />
+      </section>
       <Footer />
     </>
   );

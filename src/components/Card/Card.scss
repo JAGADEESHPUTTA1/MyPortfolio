@@ -3,16 +3,34 @@
   display: flex;
   background-color: #27262e;
   color: #ffffff;
-  padding: 30px;
+  padding: 50px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
   width: 100%;
   max-width: 350px;
 }
 
+.card-poster {
+  border-radius: 10px;
+  box-shadow: 1px 2px 5px #b0b0b0;
+}
+
+.card-skill {
+  margin: 10px 0;
+}
+
+.card-desc {
+  font-size: 12px;
+}
+
 .card-title {
   font-size: 28px;
 }
+
+.card-content {
+  margin-left: 20px;
+}
+
 .btns {
   display: flex;
   align-items: center;

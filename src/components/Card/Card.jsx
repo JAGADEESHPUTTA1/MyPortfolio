@@ -1,34 +1,28 @@
-import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import "./Card.scss";
 
 export default function Card({
   title = "Project1",
   skill = "Javascript",
-  code = "",
+  desc,
   img,
-  // desc,
 }) {
   const clickHandler = () => {
-    console.log("CODE");
+    console.log("click");
   };
   return (
     <div className="card">
       <img
-        style={{ objectFit: "contain" }}
+        className="card-poster"
         src={img}
         alt="img"
         width={150}
         height={150}
       />
-      <div>
+      <div className="card-content">
         <div className="card-title">{title}</div>
-        <div> {skill}</div>
-        {/* <div> {desc}</div> */}
+        <div className="card-skill"> {skill}</div>
+        <div className="card-desc"> {desc}</div>
       </div>
-      {/* <div className="btns">
-        <PrimaryButton text="Code" onClick={clickHandler} />
-        <PrimaryButton text="Live" onClick={clickHandler} />
-      </div> */}
     </div>
   );
 }
