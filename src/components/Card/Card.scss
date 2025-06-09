@@ -1,0 +1,20 @@
+.card {
+  margin: 24px;
+  display: flex;
+  background-color: #27262e;
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  width: 100%;
+  max-width: 350px;
+}
+
+.card-title {
+  font-size: 28px;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
