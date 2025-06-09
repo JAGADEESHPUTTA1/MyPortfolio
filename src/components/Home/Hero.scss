@@ -1,0 +1,20 @@
+.container {
+  padding: 80px 50px;
+}
+
+.hero-section {
+  // height: 100vh;
+}
+.capsule {
+  cursor: pointer;
+  margin: 28px 16px 0 0;
+  height: 50px;
+  color: #F4F5F8;
+  display: flex;
+  padding: 0 20px;  
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  background-color: #27262E;
+  border-radius: 5px;
+}
