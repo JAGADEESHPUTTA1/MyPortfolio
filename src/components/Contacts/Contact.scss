@@ -1,11 +1,14 @@
 .contact-section {
   width: 50%;
+  padding: 80px 30px;
 }
 .contact-us {
-  input,textarea  {
+  input,
+  textarea {
     width: 300px;
     height: 40px;
-    border: none;color: #ffffff;
+    border: none;
+    color: #ffffff;
     border-radius: 5px;
     background-color: #27262e;
     padding-inline: 10px;
@@ -15,4 +18,10 @@
 }
 .text-field {
   height: 135px;
+}
+@media (max-width: 767px) {
+  .contact-section {
+    width: 95%;
+    padding: 80px 0px 0px 30px;
+  }
 }

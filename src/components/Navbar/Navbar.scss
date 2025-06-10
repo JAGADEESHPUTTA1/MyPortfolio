@@ -48,3 +48,12 @@
 .nav-links a:hover {
   color: #007bff;
 }
+
+@media (max-width:767px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-items {
+    margin-right: 0;
+  }
+} 
