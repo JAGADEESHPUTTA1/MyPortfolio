@@ -1,7 +1,7 @@
 import "./About.scss";
 export default function About() {
   return (
-    <section id="about" className="about-section container">
+    <section id="about" className="about-section">
       <h3 className="heading">About Me</h3>
       <p style={{ fontSize: "20px", fontWeight: "400", color: "#b0b0b0" }}>
         Hi! I'm Jagadeesh Putta, a frontend developer with 4 years of

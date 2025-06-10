@@ -6,17 +6,12 @@ export default function Card({
   desc,
   img,
 }) {
-  const clickHandler = () => {
-    console.log("click");
-  };
   return (
     <div className="card">
       <img
         className="card-poster"
         src={img}
         alt="img"
-        width={150}
-        height={150}
       />
       <div className="card-content">
         <div className="card-title">{title}</div>

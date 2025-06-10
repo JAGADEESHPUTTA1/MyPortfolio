@@ -45,30 +45,37 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="contact-section container">
+    <section id="contact" className="contact-section">
       <h2 className="heading">Contact Me</h2>
-      <form ref={form} className="contact-us">
-        <input type="text" name="from_name" placeholder="Your Name" required />
-        <br />
-        <br />
-        <input
-          type="email"
-          name="from_email"
-          placeholder="Your Email"
-          required
-        />
-        <br />
-        <br />
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          className="text-field"
-          required
-        ></textarea>
-        <br />
-        <br />
-        <PrimarButton onClick={sendEmail} text="Send" />
-      </form>
+      <section>
+        <form ref={form} className="contact-us">
+          <input
+            type="text"
+            name="from_name"
+            placeholder="Your Name"
+            required
+          />
+          <br />
+          <br />
+          <input
+            type="email"
+            name="from_email"
+            placeholder="Your Email"
+            required
+          />
+          <br />
+          <br />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            className="text-field"
+            required
+          ></textarea>
+          <br />
+          <br />
+          <PrimarButton onClick={sendEmail} text="Send" />
+        </form>
+      </section>
     </section>
   );
 }

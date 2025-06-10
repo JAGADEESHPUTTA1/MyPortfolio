@@ -16,3 +16,9 @@ a {
   display: flex;
   width: 100%;
 }
+
+@media (max-width: 767px) {
+  .about-us {
+    flex-direction: column;
+  }
+}

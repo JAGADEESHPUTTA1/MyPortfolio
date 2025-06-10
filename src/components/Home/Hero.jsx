@@ -9,7 +9,8 @@ export default function Hero() {
     "Bootstrap",
     "Styled Components",
     "ApiTesting/postman",
-    "Jest",'Redux'
+    "Jest",
+    "Redux",
   ];
   const skillsSecondary = ["Node JS", "MongoDB", "TypeScript"];
   return (
@@ -38,7 +39,7 @@ export default function Hero() {
       >
         My primary skills include:
       </h4>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
         {skillsPrimary.map((skill, index) => {
           return (
             <div key={index} className="capsule">
@@ -58,7 +59,7 @@ export default function Hero() {
       >
         My secondary skills include:
       </h4>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
         {skillsSecondary.map((skill, index) => {
           return (
             <div key={index} className="capsule">
