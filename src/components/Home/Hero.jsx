@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import SecondaryButton from "../SecondaryButton/SecondaryButton";
 import "./Hero.scss";
-import heroImage from "/apple.png";
+import heroImage from "/myImage.jpeg";
 
 export default function Hero() {
   const skillsPrimary = [
@@ -133,7 +133,7 @@ export default function Hero() {
         <motion.div
           className="hero-image-container"
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: -80 }}
+          whileInView={{ opacity: 1, y: -60 }}
           viewport={{ once: false }}
           animate={{ y: [0, -15, 0] }}
           transition={{ duration: 1 }}
