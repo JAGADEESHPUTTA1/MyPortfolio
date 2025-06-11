@@ -11,11 +11,9 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <About />
       <Project />
-      <section className="about-us">
-        <About />
-        <Contact />
-      </section>
+      <Contact />
       <Footer />
     </>
   );

@@ -1,0 +1,19 @@
+.footer-section {
+  padding: 20px 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  color: #ffffff;
+  font-size: 12px;
+  opacity: 0.5;
+  font-weight: 200;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    font-size: 11px;
+  }
+}

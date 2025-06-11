@@ -1,5 +1,31 @@
+.project-section {
+  padding: 80px 30px;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    padding: 60px 20px;
+  }
+}
 
 .heading {
-    font-size: 32px;
-    color: #ffffff;
+  font-size: 36px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 40px;
+
+  @media (max-width: 767px) {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+
+  @media (max-width: 767px) {
+    gap: 20px;
+  }
 }
