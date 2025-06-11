@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import "./PrimaryButton.scss";
+import "./SecondaryButton.scss";
 
-export default function PrimaryButton({ text = "Button", onClick }) {
+export default function SecondaryButton({ text = "Button", onClick }) {
   return (
     <motion.button
-      className="btn-primary"
+      className="btn-secondary"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       transition={{ type: "spring", stiffness: 300 }}

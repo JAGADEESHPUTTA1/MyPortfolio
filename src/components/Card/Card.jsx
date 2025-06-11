@@ -1,23 +1,27 @@
+import { motion } from "framer-motion";
 import "./Card.scss";
 
 export default function Card({
   title = "Project1",
-  skill = "Javascript",
+  skill = "JavaScript",
   desc,
   img,
 }) {
   return (
-    <div className="card">
-      <img
-        className="card-poster"
-        src={img}
-        alt="img"
-      />
+    <motion.div
+      className="card"
+      whileHover={{ scale: 1.07 }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.1, ease: "easeOut" }}
+    >
+      <img className="card-poster" src={img} alt={title} />
       <div className="card-content">
-        <div className="card-title">{title}</div>
-        <div className="card-skill"> {skill}</div>
-        <div className="card-desc"> {desc}</div>
+        <h4 className="card-title">{title}</h4>
+        <div className="card-skill">{skill}</div>
+        <p className="card-desc">{desc}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }

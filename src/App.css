@@ -1,24 +1,50 @@
 /* ============ Global Styles ============ */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: "Segoe UI", sans-serif;
   scroll-behavior: smooth;
   background-color: #0f0f0f;
-  color: #1f2937;
+  color: #f4f4f5;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #60a5fa;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 .about-us {
   display: flex;
   width: 100%;
+  gap: 40px;
 }
 
 @media (max-width: 767px) {
   .about-us {
     flex-direction: column;
+    gap: 20px;
   }
 }

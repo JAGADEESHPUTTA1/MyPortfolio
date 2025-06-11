@@ -1,27 +1,55 @@
 .contact-section {
-  width: 50%;
+  max-width: 600px;
+  margin: 0 auto;
   padding: 80px 30px;
-}
-.contact-us {
-  input,
-  textarea {
-    width: 300px;
-    height: 40px;
-    border: none;
-    color: #ffffff;
-    border-radius: 5px;
-    background-color: #27262e;
-    padding-inline: 10px;
-    outline: none;
-    box-shadow: 0 2px 6px #27262e;
+
+  @media (max-width: 767px) {
+    padding: 60px 20px;
   }
 }
-.text-field {
-  height: 135px;
+
+.heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
 }
-@media (max-width: 767px) {
-  .contact-section {
-    width: 95%;
-    padding: 80px 0px 0px 30px;
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  input,
+  textarea {
+    width: 100%;
+    border: none;
+    color: #ffffff;
+    border-radius: 8px;
+    background-color: #27262e;
+    padding: 12px 16px;
+    outline: none;
+    font-size: 16px;
+    resize: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+
+    &:focus {
+      background-color: #2e2d35;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+
+  .text-field {
+    height: 150px;
   }
 }
