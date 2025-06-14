@@ -1,15 +1,19 @@
 import "./Contact.scss";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
+import Modal from "../Modal/Modal.jsx";
+import Spinner from "../Spinner/Spinner.jsx";
 
 export default function Contact() {
   const form = useRef();
+  const [isMailSent, setIsMailSent] = useState(false);
+  const [isSending, setIsSending] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setIsSending(true);
     const formData = new FormData(form.current);
     const name = formData.get("from_name");
     const email = formData.get("from_email");
@@ -30,7 +34,8 @@ export default function Contact() {
         .then(
           (result) => {
             console.log("Email sent:", result.text);
-            alert("Message sent!");
+            setIsMailSent(true);
+            setIsSending(false);
           },
           (error) => {
             console.error("Email failed:", error.text);
@@ -44,6 +49,23 @@ export default function Contact() {
       alert("Please fill in all fields");
     }
   };
+
+  const body = (
+    <>
+      <div>
+        Your message has been successfully sent. I appreciate you taking the
+        time to get in touch, and I'll get back to you as soon as possible. If
+        your message is urgent, feel free to connect with me directly via email
+        or LinkedIn.
+        <br />
+        <br />
+      </div>
+
+      <button className="close-btn" onClick={() => setIsMailSent(false)}>
+        close
+      </button>
+    </>
+  );
 
   return (
     <section id="contact" className="contact-section">
@@ -66,12 +88,7 @@ export default function Contact() {
         transition={{ delay: 0.2, duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <input
-          type="text"
-          name="from_name"
-          placeholder="Your Name"
-          required
-        />
+        <input type="text" name="from_name" placeholder="Your Name" required />
         <input
           type="email"
           name="from_email"
@@ -86,6 +103,14 @@ export default function Contact() {
         ></textarea>
         <PrimaryButton text="Send" />
       </motion.form>
+      {isMailSent && (
+        <Modal
+          title="Email Sent"
+          body={body}
+          onClose={() => setIsMailSent(false)}
+        />
+      )}
+      {isSending && <Modal body={<Spinner />} />}
     </section>
   );
 }
