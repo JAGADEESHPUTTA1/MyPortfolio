@@ -102,7 +102,31 @@ export default function Contact() {
           required
         ></textarea>
         <PrimaryButton text="Send" />
+        <div className="social-links">
+          <a
+            href="https://linkedin.com/in/jagadeesh-putta"
+            target="_blank"
+            rel="noopener"
+          >
+            <i className="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a
+            href="https://twitter.com/sunny_jaggu"
+            target="_blank"
+            rel="noopener"
+          >
+            <i className="fab fa-twitter fa-2x"></i>
+          </a>
+          <a
+            href="https://instagram.com/sunny_jaggu013"
+            target="_blank"
+            rel="noopener"
+          >
+            <i className="fab fa-instagram fa-2x"></i>
+          </a>
+        </div>
       </motion.form>
+
       {isMailSent && (
         <Modal
           title="Email Sent"

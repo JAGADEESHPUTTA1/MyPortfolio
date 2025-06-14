@@ -148,6 +148,7 @@ export default function Project() {
           const isEven = index % 2 === 0;
           return (
             <motion.div
+              style={{ cursor: "pointer" }}
               key={index}
               initial={{ opacity: 0, x: isEven ? -100 : 100 }}
               whileInView={{ opacity: 1, x: 0 }}
