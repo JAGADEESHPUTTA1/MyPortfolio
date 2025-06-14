@@ -10,7 +10,9 @@ export default function Footer() {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
-      <p className="footer-text">© 2025 Jagadeesh Putta | Built with React</p>
+      <p className="footer-text">
+        © 2025 Jagadeesh Putta | Built with React & Framer
+      </p>
     </motion.footer>
   );
 }
