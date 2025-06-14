@@ -116,4 +116,30 @@
   &.secondary {
     background-color: #33313a;
   }
+
+  /* Tooltip Styles */
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    white-space: nowrap;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
 }

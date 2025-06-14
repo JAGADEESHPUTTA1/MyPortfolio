@@ -168,7 +168,6 @@ export default function Hero() {
   ];
   const skillsSecondary = ["Node JS", "MongoDB", "TypeScript"];
 
-  // Typing effect setup
   const typingWords = ["Jagadeesh Putta", "a Frontend Developer"];
   const [text, setText] = useState("");
   const [isMobileView, setIsMobileView] = useState(false);
@@ -274,6 +273,7 @@ export default function Hero() {
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 },
                 }}
+                title={`Learn more about ${skill}`}
               >
                 {skill}
               </motion.div>
@@ -309,6 +309,7 @@ export default function Hero() {
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 },
                 }}
+                title={`Learn more about ${skill}`}
               >
                 {skill}
               </motion.div>

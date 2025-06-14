@@ -22,28 +22,40 @@ export default function About() {
           viewport={{ once: false }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          Hi! I'm <strong>Jagadeesh Putta</strong>, a frontend developer with{" "}
-          <strong>4 years</strong> of professional experience crafting
-          responsive, user-focused web interfaces using{" "}
-          <strong>React.js</strong>, <strong>JavaScript</strong>,{" "}
-          <strong>Bootstrap</strong>, and <strong>Styled Components</strong>.
-          <br />
-          <br />
-          I specialize in turning designs into clean, maintainable, and
-          interactive web experiences. From simple landing pages to complex user
-          dashboards, I bring performance and polish to every project.
-          <br />
-          <br />
-          🔧 <strong>What I Work With:</strong>
-          <br />
-          React.js (Functional Components, Hooks), JavaScript (ES6+), HTML5,
-          CSS3, Bootstrap 5, Redux, Styled Components, responsive mobile-first
-          design, API integration, Git & GitHub.
-          <br />
-          <br />I currently work full-time in a corporate role and take on
-          freelance projects in my evenings and weekends. I'm committed to clear
-          communication, timely delivery, and writing high-quality code. Let's
-          connect and bring your frontend vision to life!
+          Hi! I'm <strong>Jagadeesh Putta</strong>, a results-driven{" "}
+          <strong>Frontend Developer</strong> with over <strong>4 years</strong>{" "}
+          of experience designing and building modern, responsive web
+          applications. Currently, I’m working at{" "}
+          <strong>Tata Consultancy Services (TCS)</strong>, where I’ve
+          contributed to large-scale enterprise projects across diverse business
+          domains.
+          <br /> <br />
+          My expertise lies in building scalable, maintainable, and
+          user-friendly interfaces using <strong>React.js</strong>,{" "}
+          <strong>JavaScript (ES6+)</strong>, <strong>Redux</strong>,{" "}
+          <strong>Bootstrap 5</strong>, and <strong>Styled Components</strong>
+          . I excel at turning complex design requirements into clean,
+          performant code with a strong emphasis on usability and cross-browser
+          compatibility.
+          <br /> <br />
+          I have a deep understanding of component-driven development, modern
+          state management, and frontend architecture best practices. I'm
+          experienced in consuming RESTful APIs, managing version control with
+          Git, and working in fast-paced agile environments with
+          cross-functional teams.
+          <br /> <br />
+          <strong>Tech Stack & Tools:</strong>
+          <br /> <br />
+          React.js (Hooks & Functional Components), TypeScript, JavaScript
+          (ES6+), HTML5, CSS3, SCSS, Bootstrap 5, Styled Components, Redux,
+          React Hook Form, Axios, Context API, D3.js, Highcharts, Git & GitHub,
+          Postman, Jest.
+          <br /> <br />
+          I’m currently seeking new opportunities where I can leverage my
+          frontend expertise to help build impactful, high-quality digital
+          products while continuing to grow as a developer.
+          <br /> <br />
+          Let’s connect and explore how I can add value to your team!
         </motion.p>
       </div>
     </section>
