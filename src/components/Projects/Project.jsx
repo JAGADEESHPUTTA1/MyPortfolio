@@ -56,16 +56,6 @@ export default function Project() {
         "Created UI components for internal admin tools",
         "Worked with design systems team",
         "Conducted unit testing and accessibility audits",
-        "Conducted unit testing and accessibility audits",
-        "Conducted unit testing and accessibility audits",
-        "Conducted unit testing and accessibility audits",
-        "Conducted unit testing and accessibility audits",
-        "Conducted unit testing and accessibility audits",
-        "Conducted unit testing and accessibility audits",
-        "Conducted unit testing and accessibility audits",
-        "Conducted unit testing and accessibility audits",
-        "Conducted unit testing and accessibility audits",
-        "Conducted unit testing and accessibility audits",
       ],
     },
   ];
@@ -74,27 +64,22 @@ export default function Project() {
     setIsMobileView(isMobile());
   }, []);
 
+  // Prevent page scroll and modal position adjustment when modal is open
   useEffect(() => {
     const html = document.documentElement;
     const body = document.body;
 
     if (selectedProject) {
-      html.style.overflow = "hidden";
-      body.style.overflow = "hidden";
-      body.style.position = "fixed";
-      body.style.width = "100%";
+      html.style.overflow = "hidden"; // Prevents page scroll
+      body.style.overflow = "hidden"; // Prevents page scroll
     } else {
       html.style.overflow = "";
       body.style.overflow = "";
-      body.style.position = "";
-      body.style.width = "";
     }
 
     return () => {
-      html.style.overflow = "";
-      body.style.overflow = "";
-      body.style.position = "";
-      body.style.width = "";
+      html.style.overflow = ""; // Reset to default
+      body.style.overflow = ""; // Reset to default
     };
   }, [selectedProject]);
 
