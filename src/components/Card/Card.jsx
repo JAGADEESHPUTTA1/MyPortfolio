@@ -1,14 +1,10 @@
 import { motion } from "framer-motion";
 import "./Card.scss";
 
-export default function Card({
-  title = "Project1",
-  skill = "JavaScript",
-  desc,
-  img,
-}) {
+export default function Card({ title, skill, desc, img, onClick }) {
   return (
     <motion.div
+      onClick={()=>onClick(title)}
       className="card"
       whileHover={{ scale: 1.07 }}
       initial={{ opacity: 0, y: 50 }}

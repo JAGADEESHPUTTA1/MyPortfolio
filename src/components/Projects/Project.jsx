@@ -5,8 +5,11 @@ import cs from "/cs.jpg";
 import tryg from "/tryg.png";
 import pnc from "/pnc.png";
 import apple from "/apple.png";
+import { useEffect, useState } from "react";
+import { isMobile } from "../helper";
 
 export default function Project() {
+  const [isMobileView, setIsMobileView] = useState(false);
   const projects = [
     {
       title: "Credit Suisse",
@@ -33,6 +36,15 @@ export default function Project() {
       img: apple,
     },
   ];
+  useEffect(() => {
+    setIsMobileView(isMobile());
+  }, []);
+
+  const projectView = (title) => {
+    const match = projects.find((project) => {
+      return project.title === title;
+    });
+  };
 
   return (
     <section id="projects" className="project-section container">
@@ -53,15 +65,26 @@ export default function Project() {
         transition={{ delay: 0.2, duration: 1 }}
         viewport={{ once: false }}
       >
-        {projects.map((project, index) => (
-          <Card
-            key={index}
-            title={project.title}
-            skill={project.skill}
-            desc={project.desc}
-            img={project.img}
-          />
-        ))}
+        {projects.map((project, index) => {
+          const isEven = index % 2 === 0;
+          return (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: isEven ? -100 : 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: false }}
+            >
+              <Card
+                onClick={projectView}
+                title={project.title}
+                skill={project.skill}
+                desc={project.desc}
+                img={project.img}
+              />
+            </motion.div>
+          );
+        })}
       </motion.div>
     </section>
   );
