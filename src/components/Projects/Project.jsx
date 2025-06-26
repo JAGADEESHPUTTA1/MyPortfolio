@@ -19,10 +19,16 @@ export default function Project() {
       skill: "React",
       desc: "Credit Suisse specializes in investment banking and wealth management, serving clients worldwide.",
       img: cs,
+
+      Technologies: "React, Redux, D3.js, Highcharts, Bootstrap, Axios, AgGrid",
       roles: [
-        "Frontend development using React.js",
-        "Built reusable UI components",
-        "Integrated APIs and managed state with Redux",
+        "	Enhanced data visualization and trading dashboards for banking operations.",
+        "	Implemented dynamic forms, modals, and tables using React, Redux, and AgGrid with optimized state management.",
+        "	Migrated widgets from Angular to React, improving performance and modernizing the tech stack.",
+        "	Implemented AgGrid-based dynamic tables with filters, sorting, and pagination.",
+        "	Utilized Redux middleware for side-effects and async data handling.",
+        "	Challenge: Chart lags with large data.",
+        "	Solution: Used debouncing and virtualization for smooth rendering.",
       ],
     },
     {
@@ -30,10 +36,15 @@ export default function Project() {
       skill: "React",
       desc: "Tryg A/S is a leading Nordic insurance company operating in Denmark, Norway, and Sweden.",
       img: tryg,
+      Technologies: " React, TypeScript, Context API, React Router, Axios",
       roles: [
-        "Led UI revamp for claims management",
-        "Optimized performance for mobile users",
-        "Collaborated with Nordic QA teams",
+        "	Led migration from legacy AngularJS to React, enhancing performance and code maintainability.",
+        "	Built interactive claim management modules and integrated secure APIs.",
+        "	Migrated widgets using Agile sprints and ensured cross-browser compatibility.",
+        "	Implemented dark/light theme toggle and responsive grid layouts for mobile/tablet devices.",
+        "	Wrote modular SCSS and implemented lazy loading for heavy components.",
+        "	Challenge: Type errors during legacy migration.",
+        "	Solution: Created custom hooks, shared types, and reusable interfaces.",
       ],
     },
     {
@@ -41,10 +52,13 @@ export default function Project() {
       skill: "React",
       desc: "PNC Bank is a top US financial institution and part of The PNC Financial Services Group.",
       img: pnc,
+      Technologies: "React, Redux, SCSS, Hooks, Axios, Postman,",
       roles: [
-        "Built account management dashboard",
-        "Integrated secure authentication flow",
-        "Worked with backend teams on API contract",
+        "	Optimized frontend logic for financial dashboards with focus on rendering speed and user experience.",
+        "	Collaborated closely with backend engineers and UX designers to deliver responsive, accessible, and pixel-perfect UIs.",
+        "	Developed reusable UI components and integrated RESTful APIs using Axios.",
+        "	Built unit and integration test suites using Jest to ensure code quality and reduce regression bugs.",
+        "	Refactored legacy codebase to improve load times by 35%",
       ],
     },
     {
@@ -52,10 +66,20 @@ export default function Project() {
       skill: "React",
       desc: "Apple Inc. is a global tech giant known for innovative devices, software, and digital services.",
       img: apple,
+      Technologies:
+        "React, Redux, SCSS, Styled Components, React Router, Hooks, Axios, Postman, AWS S3.",
       roles: [
-        "Created UI components for internal admin tools",
-        "Worked with design systems team",
-        "Conducted unit testing and accessibility audits",
+        "Developed a responsive factory web app for vendors to document and share machine workflows via iPads.",
+        "Built pixel-perfect, modular UIs aligned with Apple’s design standards.",
+        "Handled custom integrations and responsive design enhancements for customer-facing applications.",
+        "Integrated AWS S3 for uploading large 3D/media files using pre-signed URLs and progress indicators.",
+        "Introduced performance monitoring tools to track real-time UI lag and memory issues.",
+        "Mentored junior developers and contributed to improving coding standards and knowledge sharing across teams.",
+        "Contributed to design sprints for feasibility checks and early feedback.",
+        "Challenge: Real-time data caused UI lags.",
+        "Solution: Used React.memo, lazy loading, and performance tools to boost speed.",
+        "Challenge: Uploading large 3D and other media files.",
+        "Solution: Implemented AWS S3 uploads using pre-signed URLs with progress handling.",
       ],
     },
   ];
@@ -92,12 +116,13 @@ export default function Project() {
 
   const body = (
     <>
-      <img
+      {/* <img
         src={selectedProject?.img}
         alt={selectedProject?.title}
         className="modal-img"
-      />
-      <p>{selectedProject?.desc}</p>
+      /> */}
+      <h4>Technologies</h4>
+      <p>{selectedProject?.Technologies}</p>
       <h4>Roles & Responsibilities</h4>
       <ul>
         {selectedProject?.roles.map((role, i) => (
