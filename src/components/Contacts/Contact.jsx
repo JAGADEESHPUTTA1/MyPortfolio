@@ -104,7 +104,7 @@ export default function Contact() {
         <PrimaryButton text="Send" />
         <div className="social-links">
           <a
-            href="https://linkedin.com/in/jagadeesh-putta"
+            href="www.linkedin.com/in/jagadeesh-putta-8046a3299"
             target="_blank"
             rel="noopener"
           >
