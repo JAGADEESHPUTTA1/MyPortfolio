@@ -104,21 +104,21 @@ export default function Contact() {
         <PrimaryButton text="Send" />
         <div className="social-links">
           <a
-            href="www.linkedin.com/in/jagadeesh-putta-8046a3299"
+            onClick={()=>window.open("https://www.linkedin.com/in/jagadeesh-putta-8046a3299")}
             target="_blank"
             rel="noopener"
           >
             <i className="fab fa-linkedin fa-2x"></i>
           </a>
           <a
-            href="https://twitter.com/sunny_jaggu"
+            onClick={()=>window.open("https://twitter.com/sunny_jaggu")}
             target="_blank"
             rel="noopener"
           >
             <i className="fab fa-twitter fa-2x"></i>
           </a>
           <a
-            href="https://instagram.com/sunny_jaggu013"
+            onClick={()=>window.open("https://instagram.com/sunny_jaggu013")}
             target="_blank"
             rel="noopener"
           >
