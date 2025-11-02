@@ -117,10 +117,6 @@
     background-color: #33313a;
   }
 
-  /* Tooltip Styles */
-  position: relative;
-  display: inline-block;
-
   &::after {
     content: attr(title);
     position: absolute;
