@@ -86,13 +86,8 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.5 }}
             style={{ display: "flex", gap: "16px" }}
           >
+            
             <PrimaryButton
-              text="View my work"
-              onClick={() =>
-                window.open("https://github.com/JAGADEESHPUTTA1", "_blank")
-              }
-            />
-            <SecondaryButton
               onClick={() => window.open("/JagadeeshPuttaResume.pdf")}
               text="My Resume"
             />
