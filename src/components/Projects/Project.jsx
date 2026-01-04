@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import cs from "/cs.jpg";
 import tryg from "/tryg.png";
 import pnc from "/pnc.png";
+import playup from "/final-logo.png";
 import apple from "/apple.png";
 import { useEffect, useState } from "react";
 import { isMobile } from "../helper";
@@ -15,7 +16,34 @@ export default function Project() {
 
   const projects = [
     {
+      title: "PlayUp",
+      isLive: true,
+      url: "https://playup.onrender.com/",
+      skill: "MERN Stack",
+      desc: "Full-stack platform for PlayStation console rentals with OTP authentication and online payments.",
+      img: playup, // PlayUp logo / banner
+      Technologies:
+        "React, Vite, JavaScript, CSS, Node.js, Express, MongoDB, JWT, Axios, Razorpay, GitHub, Render.",
+      roles: [
+        "Designed and developed a full-stack MERN application to manage PlayStation console rentals with real-world business workflows.",
+        "Implemented OTP-based authentication for signup and login, eliminating password-based friction while maintaining security.",
+        "Built protected user and admin routes with role-based access control and authorization middleware.",
+        "Integrated Razorpay payment gateway for secure online transactions, including payment verification and order status handling.",
+        "Developed complete order lifecycle management including order creation, admin approval, and payment tracking.",
+        "Handled frontend-backend communication with robust API error handling, loading states, and edge-case management.",
+        "Initially deployed the frontend and backend on different domains (frontend on Vercel, backend on Render).",
+        "Challenge: Cross-domain authentication caused inconsistent login behavior on mobile browsers despite HTTPS and correct cookie configuration.",
+        "Solution: Analyzed browser cookie policies and architectural constraints, then migrated the frontend to Render to maintain same-site authentication and ensure reliable mobile login.",
+        "Resolved SPA routing and refresh issues during production deployment by aligning frontend hosting strategy with backend architecture.",
+        "Addressed Node.js v22 production issues related to Express routing and preflight handling during backend deployment.",
+        "Ensured consistent authentication and session persistence across desktop and mobile devices after architecture adjustment.",
+        "Optimized UI performance and component structure for a clean, maintainable, and scalable frontend codebase.",
+        "Set up a stable CI/CD workflow using GitHub integration with Render for both frontend and backend deployments.",
+      ],
+    },
+    {
       title: "Credit Suisse",
+      isLive: false,
       skill: "React",
       desc: "Credit Suisse specializes in investment banking and wealth management, serving clients worldwide.",
       img: cs,
@@ -33,6 +61,7 @@ export default function Project() {
     },
     {
       title: "Tryg",
+      isLive: false,
       skill: "React",
       desc: "Tryg A/S is a leading Nordic insurance company operating in Denmark, Norway, and Sweden.",
       img: tryg,
@@ -49,6 +78,7 @@ export default function Project() {
     },
     {
       title: "PNC",
+      isLive: false,
       skill: "React",
       desc: "PNC Bank is a top US financial institution and part of The PNC Financial Services Group.",
       img: pnc,
@@ -63,6 +93,7 @@ export default function Project() {
     },
     {
       title: "Apple",
+      isLive: false,
       skill: "React",
       desc: "Apple Inc. is a global tech giant known for innovative devices, software, and digital services.",
       img: apple,
@@ -132,6 +163,14 @@ export default function Project() {
       <button className="close-btn" onClick={() => setSelectedProject(null)}>
         Close
       </button>
+      {selectedProject?.isLive && (
+        <button
+          className="close-btn live"
+          onClick={() => window.open(selectedProject?.url)}
+        >
+          Live
+        </button>
+      )}
     </>
   );
 
